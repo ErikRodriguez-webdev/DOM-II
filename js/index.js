@@ -14,21 +14,34 @@ navH1removes.addEventListener("mouseleave", () => {
 // 3
 document.querySelectorAll("img").forEach(function(item) {
   item.addEventListener("click", () => {
-    item.style.transform = "scale(1.3)";
+    item.style.transform = "scale(1.5)";
   });
 });
 
 // 4
-const allPText = document.querySelector("p");
-allPText.addEventListener("dblclick", () => {
-  allPText.style.color = "red";
+document.querySelectorAll("p").forEach(function(pText) {
+  pText.addEventListener("copy", () => {
+    pText.style.color = "orange";
+  });
 });
 
 // 5
 document.querySelectorAll("a").forEach(function(links) {
-  links.addEventListener("keydown", () => {
+  links.addEventListener("dblclick", () => {
     links.style.border = "2px dotted blue";
   });
 });
 
 // 6
+document.querySelectorAll(".btn").forEach(function(theBtns) {
+  window.addEventListener("resize", () => {
+    theBtns.style.display = "none";
+  });
+});
+
+// 7
+document.querySelector("h2").forEach(function(allH2) {
+  allH2.addEventListener("wheel", () => {
+    allH2.style.transform = "rotate(1turn)";
+  });
+});
